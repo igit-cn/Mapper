@@ -28,7 +28,7 @@
     <parent>
         <groupId>tk.mybatis</groupId>
         <artifactId>mapper-modules</artifactId>
-        <version>1.1.3</version>
+        <version>${revision}</version>
     </parent>
     <artifactId>mapper-generator</artifactId>
     <packaging>jar</packaging>
@@ -37,9 +37,8 @@
     <description>Mybatis 通用 Mapper 代码生成器</description>
 
     <properties>
-        <mapper-module.version>1.1.3</mapper-module.version>
         <freemarker.version>2.3.28</freemarker.version>
-        <generator.version>1.3.7</generator.version>
+        <generator.version>1.4.1</generator.version>
     </properties>
 
     <dependencies>
@@ -62,6 +61,12 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>1.5.20</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.hsqldb</groupId>
             <artifactId>sqltool</artifactId>
             <version>2.3.3</version>
@@ -69,13 +74,13 @@
         </dependency>
         <dependency>
             <groupId>javax.persistence</groupId>
-            <artifactId>persistence-api</artifactId>
+            <artifactId>javax.persistence-api</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>tk.mybatis</groupId>
             <artifactId>mapper-base</artifactId>
-            <version>${mapper-module.version}</version>
+            <version>${project.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
